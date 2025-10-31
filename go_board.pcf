@@ -1,0 +1,38 @@
+#==============================================================
+# go_board.pcf
+# Pin constraint file for Nandland Go Board (Lattice iCE40HX1K)
+# VGA + Buttons + 7-Segment Display
+#==============================================================
+
+## --- CLOCK INPUT ---
+set_io clk_12mhz 35
+
+## --- BUTTONS ---
+set_io btnU 95
+set_io btnD 94
+set_io btnL 93
+set_io btnR 92
+set_io rst 90        # optional reset button
+
+## --- VGA OUTPUTS ---
+set_io hsync 56
+set_io vsync 57
+set_io rgb[0] 61     # blue
+set_io rgb[1] 60     # green
+set_io rgb[2] 59     # red
+
+## --- 7-SEGMENT DISPLAY ---
+# segments (a through g)
+set_io seg[0] 25
+set_io seg[1] 26
+set_io seg[2] 27
+set_io seg[3] 28
+set_io seg[4] 31
+set_io seg[5] 32
+set_io seg[6] 33
+
+# digit enables (anodes)
+set_io an[0] 38
+set_io an[1] 39
+set_io an[2] 40
+set_io an[3] 41
